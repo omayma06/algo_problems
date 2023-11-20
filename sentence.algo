@@ -1,0 +1,22 @@
+ALGORITHM Sentence.Algo
+VAR
+  nb_char : INTEGER := 0;
+  nb_word : INTEGER := 0;
+  nb_vow : INTEGER := 0; 
+  str : STRING := "hello word.";
+  c : CHAR :="";
+BEGIN
+  WHILE (c <> ".") DO
+    read (c)
+    nb_char := nb_char + 1;
+    IF (c="a" OR c="e" OR c="i" OR c="o" OR c="u" OR c="y" ) THEN
+        nb_vow := nb_vow + 1;
+    END_IF
+    IF (c=" ") THEN
+        nb_word = nb_word + 1;
+    END_IF
+  END_WHILE
+  Write("number of characters" , nb_char+1);
+  Write("number of vowls" , nb_vow);
+  Write("number of words" , nb_word+1);
+END

@@ -1,0 +1,23 @@
+ALGORITHM disctinct_elem
+VAR
+   set1 : ARRAY_OF INTEGER[4];
+   set2 : ARRAY_OF INTEGER[5];
+   i, j : INTEGER;
+   sum : INTEGER :=0;
+   found : BOOLEAN;
+BEGIN
+set1 := {3, 1, 7, 9};
+set2 := {2, 4, 3, 9, 1};
+FOR i FROM 0 TO set1.length-1 STEP 1  DO
+    found := false;
+    FOR j FROM 0 TO set2.length-1 STEP 1  DO
+        IF (set1[i] = set2[j]) THEN
+            found := TRUE;
+            BREAK;
+        END_IF
+    END_FOR
+    IF(found = FALSE) THEN
+    sum := sum + set1[i]
+    END_IF
+END_FOR
+END

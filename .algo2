@@ -1,0 +1,25 @@
+ALGORITHM OR ortho_vectors
+VAR
+    v1, v2 : ARRAY_OF FLOAT[];
+    ps : FLOAT;
+    i, n : INTEGER;
+BEGIN
+ write("Write v1 and v2 length");
+ Read(n);
+
+ FOR i FROM 0 TO N-1 STEP 1  DO
+    Read(v1[i])
+ END_FOR
+ FOR i FROM 0 TO n-1 STEP 1 DO
+ Read(v2[i])
+ END_FOR
+
+ ps := dot_product(v1, v2);
+
+ IF (ps = 0) THEN
+    Write("orthogonal")
+ ELSE
+    Write("not orthogonal")
+ END_IF
+
+END
